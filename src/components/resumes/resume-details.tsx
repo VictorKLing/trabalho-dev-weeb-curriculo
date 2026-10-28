@@ -83,8 +83,6 @@ export function ResumeDetails({ id }: { id: string }) {
 
   useEffect(() => {
     let isCurrent = true;
-    setIsLoading(true);
-    setHasError(false);
 
     import("@/lib/resume-storage")
       .then(({ readResume }) => {

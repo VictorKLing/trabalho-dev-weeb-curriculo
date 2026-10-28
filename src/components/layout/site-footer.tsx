@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CopyrightYear } from "@/components/layout/copyright-year";
 
 const secondaryLinks = [
   { label: "Início", href: "/" },
@@ -14,7 +15,7 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-border/70 bg-card/60">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Gestão de currículos
+          © <CopyrightYear /> Gestão de currículos
         </p>
 
         <nav aria-label="Links secundários">

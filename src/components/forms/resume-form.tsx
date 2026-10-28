@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { ArrowLeft } from "lucide-react";
 import {
   FormProvider,
+  useWatch,
   useForm,
   type FieldErrors,
 } from "react-hook-form";
@@ -123,10 +124,11 @@ export function ResumeForm({ resumeId }: { resumeId?: string }) {
     register,
     handleSubmit,
     setValue,
-    watch,
     reset,
     formState: { errors, isSubmitting, isValid },
   } = form;
+  const fullName = useWatch({ control: form.control, name: "fullName" });
+  const photo = useWatch({ control: form.control, name: "photo" });
 
   useEffect(() => {
     if (!resumeId) return;
@@ -251,8 +253,8 @@ export function ResumeForm({ resumeId }: { resumeId?: string }) {
 
             <div className="mb-6">
               <ImageUploadField
-                fullName={watch("fullName")}
-                photo={watch("photo")}
+                fullName={fullName}
+                photo={photo}
                 onPhotoChange={(photo) =>
                   setValue("photo", photo, {
                     shouldDirty: true,

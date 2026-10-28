@@ -7,5 +7,5 @@ export default async function CurriculumDetailPage({
 }) {
   const { id } = await params;
 
-  return <ResumeDetails id={id} />;
+  return <ResumeDetails key={id} id={id} />;
 }
