@@ -48,7 +48,7 @@ export function ResumeCard({ resume }: { resume: Resume }) {
           {[resume.city, resume.state].filter(Boolean).join(", ")}
         </span>
         <Button asChild variant="ghost" size="sm" className="shrink-0 gap-2">
-          <Link href={`/sistema/paginas/curriculos/${resume.id}`}>
+          <Link href={`/curriculos/visualizar/${resume.id}`}>
             Ver perfil
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>

@@ -9,6 +9,7 @@ import {
   GraduationCap,
   MapPin,
   Mail,
+  Pencil,
   Phone,
   UserRound,
 } from "lucide-react";
@@ -21,8 +22,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Resume } from "@/types/resume";
 
-const listHref = "/sistema/paginas/curriculos";
-const createHref = "/sistema/paginas/curriculos/novo";
+const listHref = "/curriculos/visualizar";
+const createHref = "/curriculos/cadastrar";
 
 function formatDate(value: string) {
   if (!value) return "Não informado";
@@ -145,7 +146,17 @@ export function ResumeDetails({ id }: { id: string }) {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <Button
+                asChild
+                variant="outline"
+                className="h-11 gap-2 rounded-xl"
+              >
+                <Link href={`${createHref}?editar=${resume.id}`}>
+                  <Pencil aria-hidden="true" className="size-4" />
+                  Editar currículo
+                </Link>
+              </Button>
               <Button
                 asChild
                 variant="outline"

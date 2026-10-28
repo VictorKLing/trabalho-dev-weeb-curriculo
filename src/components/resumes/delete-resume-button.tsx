@@ -36,7 +36,7 @@ export function DeleteResumeButton({ id, fullName }: DeleteResumeButtonProps) {
       const { deleteResume } = await import("@/lib/resume-storage");
       deleteResume(id);
       toast.success("Currículo excluído.");
-      router.push("/sistema/paginas/curriculos");
+      router.push("/curriculos/visualizar");
     } catch {
       toast.error("Não foi possível excluir o currículo.");
     } finally {

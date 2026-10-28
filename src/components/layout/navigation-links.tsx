@@ -5,12 +5,12 @@ const links: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Início", href: "/", icon: House },
   {
     label: "Currículos",
-    href: "/sistema/paginas/curriculos",
+    href: "/curriculos/visualizar",
     icon: Files,
   },
   {
     label: "Cadastrar currículo",
-    href: "/sistema/paginas/curriculos/novo",
+    href: "/curriculos/cadastrar",
     icon: UserRoundPlus,
   },
 ];
@@ -18,17 +18,10 @@ const links: { label: string; href: string; icon: LucideIcon }[] = [
 function isCurrentPage(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
 
-  if (href === "/sistema/paginas/curriculos/novo") {
-    return pathname === href || pathname === "/curriculos/cadastrar";
-  }
+  if (href === "/curriculos/cadastrar") return pathname === href;
 
-  if (href === "/sistema/paginas/curriculos") {
-    return (
-      pathname === href ||
-      (pathname.startsWith(`${href}/`) && pathname !== `${href}/novo`) ||
-      pathname === "/curriculos/visualizar" ||
-      pathname.startsWith("/curriculos/visualizar/")
-    );
+  if (href === "/curriculos/visualizar") {
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   return pathname === href;

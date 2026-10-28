@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import type { Resume } from "@/types/resume";
 
-const createResumeHref = "/sistema/paginas/curriculos/novo";
+const createResumeHref = "/curriculos/cadastrar";
 
 function normalizeSearch(value: string) {
   return value

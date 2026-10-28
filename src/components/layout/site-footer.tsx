@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const secondaryLinks = [
   { label: "Início", href: "/" },
-  { label: "Currículos", href: "/sistema/paginas/curriculos" },
+  { label: "Currículos", href: "/curriculos/visualizar" },
   {
     label: "Cadastrar currículo",
-    href: "/sistema/paginas/curriculos/novo",
+    href: "/curriculos/cadastrar",
   },
 ];
 

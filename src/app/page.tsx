@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="h-12 rounded-xl px-5 text-sm shadow-sm">
-              <Link href="/sistema/paginas/curriculos">
+              <Link href="/curriculos/visualizar">
                 Ver currículos
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Link>
@@ -83,7 +83,7 @@ export default function Home() {
               size="lg"
               className="h-12 rounded-xl border-border/80 bg-card px-5 text-sm"
             >
-              <Link href="/sistema/paginas/curriculos/novo">
+              <Link href="/curriculos/cadastrar">
                 Cadastrar currículo
               </Link>
             </Button>
@@ -237,7 +237,7 @@ export default function Home() {
             variant="link"
             className="mt-5 h-auto gap-2 px-0 text-sm font-semibold"
           >
-            <Link href="/sistema/paginas/curriculos/novo">
+            <Link href="/curriculos/cadastrar">
               Começar um cadastro
               <ArrowRight aria-hidden="true" className="size-4" />
             </Link>
